@@ -1,0 +1,5 @@
+name: GuardDog
+author: ArchmageInc
+main: com.archmageinc.GuardDog.GuardDog
+version: 0.1
+description: Allows players to tell tame dogs to attack other players
