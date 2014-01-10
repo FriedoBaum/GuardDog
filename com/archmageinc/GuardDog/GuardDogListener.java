@@ -54,6 +54,8 @@ public class GuardDogListener implements Listener {
         plugin.destroyGuard(wolf);
     }
     
-    
+    /*
+    TODO: Create a listener and have guard dogs attack nearby players. IDK how to do this yet.
+    */
     
 }
