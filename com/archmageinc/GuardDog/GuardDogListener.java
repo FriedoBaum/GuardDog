@@ -2,9 +2,7 @@
 
 package com.archmageinc.GuardDog;
 
-import java.util.HashSet;
 import org.bukkit.ChatColor;
-import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Wolf;
