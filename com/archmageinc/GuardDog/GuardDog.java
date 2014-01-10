@@ -6,11 +6,14 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import org.bukkit.ChatColor;
 import org.bukkit.DyeColor;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
 import org.bukkit.entity.Wolf;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
@@ -55,7 +58,10 @@ public class GuardDog extends JavaPlugin {
         guards.remove(wolf);
         logMessage("A guard dog has been destroyed: "+wolf.getUniqueId().toString());
         saveGuards();
-
+        if(!(wolf.getOwner() instanceof OfflinePlayer)){
+           Player player    =   (Player) wolf.getOwner();
+           player.sendMessage(ChatColor.WHITE+"One of your "+ChatColor.GREEN+"Guard Dogs"+ChatColor.WHITE+" has died.");
+        }
     }
     
     public void saveGuards(){
